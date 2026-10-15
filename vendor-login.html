@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In · Quality Compliance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/css/intlTelInput.min.css"
+    />
+  <link rel="stylesheet" href="assets/css/vendor.css" />
+</head>
+
+<body>
+  <main class="qc-login d-flex flex-column">
+    <span class="qc-orb one"></span>
+    <span class="qc-orb two"></span>
+
+    <!-- Top bar -->
+    <div class="container-xl d-flex align-items-center justify-content-between py-4 position-relative" data-aos="fade-down">
+      <a href="#" class="qc-login-logo d-inline-block">
+        <img src="assets/imgs/vendor/logo-white.png" alt="Quality Compliance"
+             onerror="this.onerror=null;this.src='assets/imgs/vendor/logo.png';" />
+      </a>
+      <div class="qc-lang btn-group" role="group" aria-label="Language">
+        <button type="button" class="btn active" data-lang="en">EN</button>
+        <button type="button" class="btn" data-lang="ar">AR</button>
+      </div>
+    </div>
+
+    <!-- Sign in -->
+    <div class="flex-grow-1 d-flex align-items-center justify-content-center px-3 pb-5 position-relative">
+      <div class="qc-login-box w-100 text-center pb-5 mb-5">
+        <h1 class="fw-bold display-6 mb-2" data-aos="fade-up">Welcome Back</h1>
+        <p class="text-white-50 mb-4" data-aos="fade-up" data-aos-delay="100">Sign in to your Quality Compliance vendor account.</p>
+
+        <form id="loginForm" class="text-start" action="vendor-requests.html" novalidate>
+          <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+            <label for="vendorId" class="form-label">Vendor ID</label>
+            <input type="text" class="form-control" id="vendorId" placeholder="Enter your id" required />
+            <div class="invalid-feedback">Please enter your vendor ID.</div>
+          </div>
+
+          <div class="mb-4" data-aos="fade-up" data-aos-delay="300">
+            <label for="password" class="form-label">Password</label>
+            <div class="qc-input-icon end">
+              <input type="password" class="form-control" id="password" placeholder="Enter your password" required minlength="6" />
+              <i class="bi bi-eye-slash qc-eye" data-toggle-password="#password" role="button" aria-label="Show password"></i>
+            </div>
+            <div class="invalid-feedback">Password must be at least 6 characters.</div>
+          </div>
+
+          <div class="text-center" data-aos="zoom-in" data-aos-delay="400">
+            <button type="submit" class="btn btn-qc px-5 py-2 w-50">Sign In</button>
+          </div>
+        </form>
+
+        <p class="mt-4 small text-white-50" data-aos="fade-up" data-aos-delay="500">
+          Don't have a vendor account?
+          <a href="vendor-register.html" class="btn-link-qc ms-1 text-decoration-underline">Register as a Vendor</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/js/intlTelInput.min.js"></script>
+  <script src="assets/js/phone.js"></script>
+<script src="assets/js/vendor.js"></script>
+</body>
+</html>

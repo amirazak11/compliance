@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Registration · Quality Compliance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+          <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/css/intlTelInput.min.css"
+    />
+  <link rel="stylesheet" href="assets/css/vendor.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="qc-header sticky-top">
+    <div class="container-xl d-flex align-items-center justify-content-between py-3">
+      <a href="vendor-login.html" class="qc-brand d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/imgs/vendor/logo.png" alt="Quality Compliance logo" />
+        <div>
+          <div class="qc-brand-title">Quality Compliance</div>
+          <div class="qc-brand-sub">VENDOR PORTAL</div>
+        </div>
+      </a>
+      <div class="qc-lang btn-group" role="group" aria-label="Language">
+        <button type="button" class="btn active" data-lang="en">EN</button>
+        <button type="button" class="btn" data-lang="ar">AR</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-xl py-4 py-lg-5">
+    <!-- Page heading -->
+    <div class="d-flex justify-content-between align-items-start qc-reveal">
+      <div>
+        <div class="qc-eyebrow mb-1">Vendor Onboarding</div>
+        <h1 class="qc-page-title mb-1">Vendor Registration</h1>
+        <p class="text-muted mb-0">Complete your company information and upload the required documents to register as a vendor.</p>
+      </div>
+      <span id="stepCounter" class="text-muted fs-xs text-nowrap">Step 1 of 3</span>
+    </div>
+
+    <!-- Stepper -->
+    <ol class="qc-stepper d-flex flex-column flex-md-row gap-3 gap-md-0 my-4 qc-reveal d1">
+      <li class="qc-step active">
+        <span class="qc-step-dot">1</span>
+        <div><div class="qc-step-title">Personal Information</div><div class="qc-step-state">In progress</div></div>
+      </li>
+      <li class="qc-step">
+        <span class="qc-step-dot">2</span>
+        <div><div class="qc-step-title">Company Information</div><div class="qc-step-state">Upcoming</div></div>
+      </li>
+      <li class="qc-step">
+        <span class="qc-step-dot">3</span>
+        <div><div class="qc-step-title">Services &amp; Documents</div><div class="qc-step-state">Upcoming</div></div>
+      </li>
+    </ol>
+
+    <form id="registerForm" class="qc-card qc-reveal d2" novalidate>
+
+      <!-- =============== STEP 1 : PERSONAL =============== -->
+      <section class="qc-pane p-3 p-md-4" data-step="1">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+          <div>
+            <h2 class="h5 fw-semibold mb-1">Personal Information</h2>
+            <p class="text-muted fs-xs mb-0">Tell us about the primary contact for your company.</p>
+          </div>
+          <span class="fs-xxs text-qc-red">* Required fields</span>
+        </div>
+
+        <!-- General Manager -->
+        <div class="qc-section py-3" data-aos="fade-up">
+          <h3 class="qc-subhead mb-3">General Manager</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+              <div class="invalid-feedback">Full name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" class="form-control" placeholder="name@gmail.com" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Land Line <span class="req">*</span></label>
+                                <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_1"
+                      id="phone-1"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number <span class="req">*</span></label>
+                                <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_2"
+                      id="phone-2"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations Manager -->
+        <div class="qc-section py-3" data-aos="fade-up">
+          <h3 class="qc-subhead mb-3">Operations Manager</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+              <div class="invalid-feedback">Full name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" class="form-control" placeholder="name@gmail.com" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Land Line <span class="req">*</span></label>
+                                <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_3"
+                      id="phone-3"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number <span class="req">*</span></label>
+                                <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_4"
+                      id="phone-4"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Head of Accounting -->
+        <div class="qc-section py-3" data-aos="fade-up">
+          <h3 class="qc-subhead mb-3">Head of Accounting</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+              <div class="invalid-feedback">Full name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" class="form-control" placeholder="name@gmail.com" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Land Line <span class="req">*</span></label>
+              <div class="input-group qc-phone has-validation">
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  name="phone_5"
+                  id="phone-5"
+                  class="form-control phone"
+                  required
+                />
+                <div class="invalid-feedback">Enter a valid phone number.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number <span class="req">*</span></label>
+                                   <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_6"
+                      id="phone-6"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sales Manager -->
+        <div class="qc-section py-3" data-aos="fade-up">
+          <h3 class="qc-subhead mb-3">Sales Manager</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+              <div class="invalid-feedback">Full name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email Address <span class="req">*</span></label>
+              <input type="email" class="form-control" placeholder="name@gmail.com" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Land Line <span class="req">*</span></label>
+                                 <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_7"
+                      id="phone-7"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number <span class="req">*</span></label>
+                                 <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_8"
+                      id="phone-8"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+          <span class="text-muted fs-xs">Next: Company Information</span>
+          <button type="button" class="btn btn-qc" data-next>Save &amp; Continue <i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
+      </section>
+
+      <!-- =============== STEP 2 : COMPANY =============== -->
+      <section class="qc-pane p-3 p-md-4" data-step="2">
+        <!-- Company information -->
+        <div class="pb-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+              <h2 class="h5 fw-semibold mb-1">Company Information</h2>
+              <p class="text-muted fs-xs mb-0">Tell us about the primary contact for your company.</p>
+            </div>
+            <span class="fs-xxs text-qc-red">* Required fields</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Company Legal Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter company name" required />
+              <div class="invalid-feedback">Company legal name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Company Name in Arabic</label>
+              <input type="text" class="form-control" placeholder="Enter company name in Arabic" dir="auto" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Company Type <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="" selected disabled>Select</option>
+                <option>Limited Liability Company (LLC)</option>
+                <option>Joint Stock Company</option>
+                <option>Sole Proprietorship</option>
+                <option>Partnership</option>
+              </select>
+              <div class="invalid-feedback">Select a company type.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Commercial Registration (CR) Number <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="eg. 1010254567" required pattern="[0-9]{10}" />
+              <div class="invalid-feedback">CR number must be 10 digits.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">VAT Registration Number</label>
+              <input type="text" class="form-control" placeholder="eg. 310987654300003" pattern="[0-9]{15}" />
+              <div class="invalid-feedback">VAT number must be 15 digits.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">CR Issue Date <span class="req">*</span></label>
+              <input type="date" class="form-control" required />
+              <div class="invalid-feedback">Select the issue date.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">CR Expiry Date</label>
+              <input type="date" class="form-control" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Vendor Type <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="" selected disabled>Select</option>
+                <option>Supplier</option>
+                <option>Service Provider</option>
+                <option>Contractor</option>
+                <option>Consultant</option>
+              </select>
+              <div class="invalid-feedback">Select a vendor type.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business contact -->
+        <div class="qc-section py-4" data-aos="fade-up">
+          <h2 class="h6 fw-semibold mb-1">Business contact details</h2>
+          <p class="text-muted fs-xs mb-3">Use your company's official contact information.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Company Website</label>
+              <input type="url" class="form-control" placeholder="Enter company website" />
+              <div class="invalid-feedback">Enter a full URL, e.g. https://example.sa</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Company Email <span class="req">*</span></label>
+              <input type="email" class="form-control" placeholder="info@example.sa" required />
+              <div class="invalid-feedback">Enter a valid email.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Company Phone Number <span class="req">*</span></label>
+                                <div class="input-group qc-phone has-validation">
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      name="phone_9"
+                      id="phone-9"
+                      class="form-control phone"
+                      required
+                    />
+                   <div class="invalid-feedback">Enter a valid phone number.</div>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finance -->
+        <div class="qc-section py-4" data-aos="fade-up">
+          <h2 class="h6 fw-semibold mb-1">Finance Information</h2>
+          <p class="text-muted fs-xs mb-3">Enter bank information.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Bank Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter bank name" required />
+              <div class="invalid-feedback">Bank name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Account Holder Name <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter account holder name" required />
+              <div class="invalid-feedback">Account holder name is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Account Number <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter account number" required />
+              <div class="invalid-feedback">Account number is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">IBAN <span class="req">*</span></label>
+              <input type="text" class="form-control text-uppercase" placeholder="Enter IBAN" required pattern="[Ss][Aa][0-9]{2}[0-9A-Za-z ]{18,26}" />
+              <div class="invalid-feedback">Enter a valid Saudi IBAN (starts with SA).</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="qc-section py-4" data-aos="fade-up">
+          <h2 class="h6 fw-semibold mb-1">Business address</h2>
+          <p class="text-muted fs-xs mb-3">Enter the address of your principal business location.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Country <span class="req">*</span></label>
+              <div class="qc-input-icon">
+                <i class="bi bi-search"></i>
+                <select class="form-select" required>
+                  <option value="" disabled>Select country</option>
+                  <option selected>Saudi Arabia</option>
+                  <option>United Arab Emirates</option>
+                  <option>Kuwait</option>
+                  <option>Bahrain</option>
+                  <option>Qatar</option>
+                  <option>Oman</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">City <span class="req">*</span></label>
+              <div class="qc-input-icon">
+                <i class="bi bi-search"></i>
+                <select class="form-select" required>
+                  <option value="" selected disabled>Riyadh</option>
+                  <option>Riyadh</option>
+                  <option>Jeddah</option>
+                  <option>Dammam</option>
+                  <option>Mecca</option>
+                  <option>Medina</option>
+                  <option>Khobar</option>
+                </select>
+              </div>
+              <div class="invalid-feedback">Select a city.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Business Address <span class="req">*</span></label>
+              <input type="text" class="form-control" placeholder="Enter your address" required />
+              <div class="invalid-feedback">Business address is required.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Short Address</label>
+              <input type="text" class="form-control" placeholder="Enter your address" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Postal Code</label>
+              <input type="text" class="form-control" placeholder="eg. 12271" pattern="[0-9]{5}" />
+              <div class="invalid-feedback">Postal code must be 5 digits.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Year Established</label>
+              <input type="number" class="form-control" placeholder="Enter year" min="1900" max="2026" />
+              <div class="invalid-feedback">Enter a year between 1900 and 2026.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Number of Employees</label>
+              <select class="form-select">
+                <option value="" selected>Select</option>
+                <option>1 – 10</option>
+                <option>11 – 50</option>
+                <option>51 – 200</option>
+                <option>201 – 500</option>
+                <option>500+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+          <button type="button" class="btn btn-qc-outline" data-prev><i class="bi bi-arrow-left me-1"></i> Back</button>
+          <button type="button" class="btn btn-qc" data-next>Save &amp; Continue <i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
+      </section>
+
+      <!-- =============== STEP 3 : SERVICES & DOCUMENTS =============== -->
+      <section class="qc-pane p-3 p-md-4" data-step="3">
+        <div class="pb-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+              <h2 class="h5 fw-semibold mb-1">Services &amp; Documents</h2>
+              <p class="text-muted fs-xs mb-0">Describe your capabilities and provide the documents that support your qualification.</p>
+            </div>
+            <span class="fs-xxs text-qc-red">* Required fields</span>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Primary Business Category <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="" selected disabled>Select</option>
+                <option>Logistics &amp; Transportation</option>
+                <option>Construction</option>
+                <option>IT &amp; Telecommunications</option>
+                <option>Facility Management</option>
+                <option>Medical Supplies</option>
+              </select>
+              <div class="invalid-feedback">Select a category.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Service Subcategory <span class="req">*</span></label>
+              <select class="form-select" required>
+                <option value="" selected disabled>Select</option>
+                <option>Cold-chain logistics</option>
+                <option>Freight forwarding</option>
+                <option>Warehousing</option>
+                <option>Last-mile delivery</option>
+              </select>
+              <div class="invalid-feedback">Select a subcategory.</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Description of Services <span class="req">*</span></label>
+              <textarea class="form-control" rows="3" required minlength="20" placeholder="eg. We supply and maintain industrial equipment, manufacturing parts and machinery as well as provide after-sale maintenance and repair services to clients within the region."></textarea>
+              <div class="invalid-feedback">Describe your services (at least 20 characters).</div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Notes</label>
+              <textarea class="form-control" rows="3" placeholder="Add any relevant notes, credentials, or service details"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supporting documents -->
+        <div class="qc-section pt-4">
+          <h2 class="h5 fw-semibold mb-1">Supporting documents</h2>
+          <p class="text-muted fs-xs mb-3">Upload clear, legible copies of each document. Files must be PDF, JPG or PNG, up to 10 MB.</p>
+
+          <!-- CR certificate : uploaded -->
+          <div class="qc-upload p-3 mb-3" data-required data-aos="fade-up">
+            <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="qc-file-ico"><i class="bi bi-file-earmark-text"></i></span>
+                <div><div class="fw-semibold fs-xs">Commercial Registration Certificate</div><div class="fs-xxs text-muted">Required</div></div>
+              </div>
+              <span class="qc-upload-status"></span>
+            </div>
+            <div class="qc-drop d-flex flex-wrap align-items-center justify-content-between gap-2 p-3" role="button">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-cloud-arrow-up fs-4 text-qc-red"></i>
+                <div><div class="fw-semibold fs-xs">Drag and drop your document here</div><div class="fs-xxs text-muted">PDF, JPG or PNG · Maximum 10 MB per file</div></div>
+              </div>
+              <button type="button" class="btn btn-link btn-link-qc p-0" data-browse>Browse Files</button>
+            </div>
+            <input type="file" class="d-none" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="qc-files">
+              <div class="qc-file-row mt-3" data-state="uploaded" data-name="Najd_CR_2026.pdf">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-pdf text-qc-red fs-5"></i>
+                  <div class="flex-grow-1" style="min-width:0">
+                    <div class="fw-semibold fs-xs text-truncate">Najd_CR_2026.pdf</div>
+                    <div class="fs-xxs text-success" data-meta>1.2 MB · Uploaded successfully</div>
+                  </div>
+                  <button type="button" class="btn btn-sm text-danger p-1" data-remove aria-label="Remove"><i class="bi bi-trash3"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VAT certificate : uploading -->
+          <div class="qc-upload p-3 mb-3" data-required data-aos="fade-up">
+            <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="qc-file-ico"><i class="bi bi-receipt"></i></span>
+                <div><div class="fw-semibold fs-xs">VAT / Tax Certificate</div><div class="fs-xxs text-muted">Required (if applicable)</div></div>
+              </div>
+              <span class="qc-upload-status"></span>
+            </div>
+            <div class="qc-drop d-flex flex-wrap align-items-center justify-content-between gap-2 p-3" role="button">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-cloud-arrow-up fs-4 text-qc-red"></i>
+                <div><div class="fw-semibold fs-xs">Drag and drop your document here</div><div class="fs-xxs text-muted">PDF, JPG or PNG · Maximum 10 MB per file</div></div>
+              </div>
+              <button type="button" class="btn btn-link btn-link-qc p-0" data-browse>Browse Files</button>
+            </div>
+            <input type="file" class="d-none" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="qc-files">
+              <div class="qc-file-row mt-3" data-state="uploading" data-name="Najd_VAT_Certificate.pdf" data-size="1258291" data-progress="45">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-pdf text-qc-red fs-5"></i>
+                  <div class="flex-grow-1" style="min-width:0">
+                    <div class="fw-semibold fs-xs text-truncate">Najd_VAT_Certificate.pdf</div>
+                    <div class="fs-xxs text-muted" data-meta>540 KB of 1.2 MB · 45%</div>
+                  </div>
+                </div>
+                <div class="qc-progress mt-2"><span style="width:45%"></span></div>
+                <div class="text-end mt-1"><button type="button" class="btn btn-link btn-link-qc p-0 fs-xxs" data-cancel>Cancel upload</button></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company profile : uploaded -->
+          <div class="qc-upload p-3 mb-3" data-aos="fade-up">
+            <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="qc-file-ico"><i class="bi bi-building"></i></span>
+                <div><div class="fw-semibold fs-xs">Company Profile</div><div class="fs-xxs text-muted">Optional</div></div>
+              </div>
+              <span class="qc-upload-status"></span>
+            </div>
+            <div class="qc-drop d-flex flex-wrap align-items-center justify-content-between gap-2 p-3" role="button">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-cloud-arrow-up fs-4 text-qc-red"></i>
+                <div><div class="fw-semibold fs-xs">Drag and drop your document here</div><div class="fs-xxs text-muted">PDF, JPG or PNG · Maximum 10 MB per file</div></div>
+              </div>
+              <button type="button" class="btn btn-link btn-link-qc p-0" data-browse>Browse Files</button>
+            </div>
+            <input type="file" class="d-none" accept=".pdf,.jpg,.jpeg,.png" />
+            <div class="qc-files">
+              <div class="qc-file-row mt-3" data-state="uploaded" data-name="Najd_Company_Profile_2026.pdf">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-pdf text-qc-red fs-5"></i>
+                  <div class="flex-grow-1" style="min-width:0">
+                    <div class="fw-semibold fs-xs text-truncate">Najd_Company_Profile_2026.pdf</div>
+                    <div class="fs-xxs text-success" data-meta>1.8 MB · Uploaded successfully</div>
+                  </div>
+                  <button type="button" class="btn btn-sm text-danger p-1" data-remove aria-label="Remove"><i class="bi bi-trash3"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificates : invalid -->
+          <div class="qc-upload p-3 mb-3" data-aos="fade-up">
+            <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="qc-file-ico"><i class="bi bi-award"></i></span>
+                <div><div class="fw-semibold fs-xs">Certificates &amp; Licenses</div><div class="fs-xxs text-muted">Optional</div></div>
+              </div>
+              <span class="qc-upload-status"></span>
+            </div>
+            <div class="qc-drop d-flex flex-wrap align-items-center justify-content-between gap-2 p-3" role="button">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-cloud-arrow-up fs-4 text-qc-red"></i>
+                <div><div class="fw-semibold fs-xs">Drag and drop your document here</div><div class="fs-xxs text-muted">PDF, JPG or PNG · Maximum 10 MB per file</div></div>
+              </div>
+              <button type="button" class="btn btn-link btn-link-qc p-0" data-browse>Browse Files</button>
+            </div>
+            <input type="file" class="d-none" accept=".pdf,.jpg,.jpeg,.png" multiple />
+            <div class="qc-files">
+              <div class="qc-file-row mt-3" data-state="invalid" data-name="ISO_License.docx">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-file-earmark-pdf text-qc-red fs-5"></i>
+                  <div class="flex-grow-1" style="min-width:0">
+                    <div class="fw-semibold fs-xs text-truncate">ISO_License.docx</div>
+                    <div class="fs-xxs text-danger" data-meta>2.4 MB · Not supported</div>
+                  </div>
+                  <button type="button" class="btn btn-sm text-danger p-1" data-remove aria-label="Remove"><i class="bi bi-trash3"></i></button>
+                </div>
+                <div class="qc-file-error fs-xxs px-3 py-2 mt-2"><i class="bi bi-exclamation-circle me-1"></i>Unsupported file. Upload a PDF, JPG or PNG under 10 MB.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional : empty -->
+          <div class="qc-upload p-3 mb-3" data-aos="fade-up">
+            <div class="d-flex align-items-start justify-content-between gap-2 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="qc-file-ico"><i class="bi bi-folder-plus"></i></span>
+                <div><div class="fw-semibold fs-xs">Additional Supporting Documents</div><div class="fs-xxs text-muted">Optional · multiple files allowed</div></div>
+              </div>
+              <span class="qc-upload-status"></span>
+            </div>
+            <div class="qc-drop d-flex flex-wrap align-items-center justify-content-between gap-2 p-3" role="button">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-cloud-arrow-up fs-4 text-qc-red"></i>
+                <div><div class="fw-semibold fs-xs">Drag and drop your document here</div><div class="fs-xxs text-muted">PDF, JPG or PNG · Maximum 10 MB per file</div></div>
+              </div>
+              <button type="button" class="btn btn-link btn-link-qc p-0" data-browse>Browse Files</button>
+            </div>
+            <input type="file" class="d-none" accept=".pdf,.jpg,.jpeg,.png" multiple />
+            <div class="qc-files"></div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+          <button type="button" class="btn btn-qc-outline" data-prev><i class="bi bi-arrow-left me-1"></i> Back</button>
+          <button type="submit" class="btn btn-qc">Register Now <i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <!-- ================= SUCCESS MODAL ================= -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 rounded-4 p-4 text-center">
+        <div class="qc-check mb-3">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="#12a150" stroke-width="3" /><path d="M15 27l7 7 15-16" fill="none" stroke="#12a150" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </div>
+        <h3 class="h5 fw-bold">Registration submitted</h3>
+        <p class="text-muted small mb-1">Your vendor application is under review. We'll email your Vendor ID once it's approved.</p>
+        <p class="small mb-4">Tracking number: <span class="fw-bold text-qc-navy">QC-2026-00153</span></p>
+        <div class="d-flex gap-2 justify-content-center">
+          <a href="vendor-login.html" class="btn btn-qc-outline">Back to Sign In</a>
+          <a href="vendor-requests.html" class="btn btn-qc">Track Request <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/js/intlTelInput.min.js"></script>
+  <script src="assets/js/phone.js"></script>
+<script src="assets/js/vendor.js"></script>
+</body>
+</html>

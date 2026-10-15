@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Details · Quality Compliance</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+          <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/css/intlTelInput.min.css"
+    />
+  <link rel="stylesheet" href="assets/css/vendor.css" />
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="qc-header sticky-top">
+    <div class="container-xl d-flex align-items-center justify-content-between py-3">
+      <a href="vendor-requests.html" class="qc-brand d-flex align-items-center gap-2 text-decoration-none">
+        <img src="assets/imgs/vendor/logo.png" alt="Quality Compliance logo" />
+        <div>
+          <div class="qc-brand-title">Quality Compliance</div>
+          <div class="qc-brand-sub">VENDOR PORTAL</div>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-3">
+        <span class="qc-status-pill d-none d-sm-inline-flex align-items-center gap-1"><i class="bi bi-check-circle"></i> Active</span>
+        <div class="qc-lang btn-group" role="group" aria-label="Language">
+          <button type="button" class="btn active" data-lang="en">EN</button>
+          <button type="button" class="btn" data-lang="ar">AR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container-xl py-4 py-lg-5 overflow-hidden">
+    <a href="vendor-requests.html" class="btn-link-qc fs-xs d-inline-flex align-items-center gap-1 mb-3 qc-reveal"><i class="bi bi-arrow-left"></i> Back to Requests</a>
+    <div class="qc-reveal mb-4">
+      <h1 class="qc-page-title mb-1">Request Details</h1>
+      <p class="text-muted mb-0">Review submitted changes and follow the progress of your request.</p>
+    </div>
+
+    <!-- Summary -->
+    <section class="qc-card p-3 p-md-4 mb-4 qc-reveal d1">
+      <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 pb-3 mb-3 border-bottom">
+        <div>
+          <div class="text-muted fs-xxs text-uppercase fw-semibold mb-1">Tracking number</div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="h3 fw-bold text-qc-navy mb-0">QC-2026-00148</span>
+            <button type="button" class="btn btn-sm text-qc-navy p-1" data-copy="QC-2026-00148" aria-label="Copy tracking number"><i class="bi bi-copy"></i></button>
+          </div>
+        </div>
+        <div class="text-md-end">
+          <span class="qc-badge review">Under review</span>
+          <div class="text-muted fs-xxs mt-2">No action required from you</div>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-6 col-md-3"><div class="text-muted fs-xs mb-1">Request type</div><div class="fw-semibold">Profile edit</div></div>
+        <div class="col-6 col-md-3"><div class="text-muted fs-xs mb-1">Company</div><div class="fw-semibold">Najd Logistics</div></div>
+        <div class="col-6 col-md-3"><div class="text-muted fs-xs mb-1">Submitted</div><div class="fw-semibold">08 Oct 2026 · 09:24 AST</div></div>
+        <div class="col-6 col-md-3"><div class="text-muted fs-xs mb-1">Last update</div><div class="fw-semibold">11 Oct 2026 · 10:15 AST</div></div>
+      </div>
+    </section>
+
+    <div class="row g-4">
+      <!-- Left column -->
+      <div class="col-lg-8">
+        <section class="qc-card overflow-hidden mb-4" data-aos="fade-up">
+          <div class="p-3 p-md-4 pb-3">
+            <h2 class="h5 fw-semibold mb-1">Requested profile changes</h2>
+            <p class="text-muted fs-xs mb-0">4 changes · Current values remain active until approval.</p>
+          </div>
+          <div class="table-responsive">
+            <table class="table qc-table">
+              <thead>
+                <tr><th>Profile field</th><th>Current value</th><th class="text-qc-navy">Proposed value</th></tr>
+              </thead>
+              <tbody>
+                <tr class="row-in">
+                  <td><div class="fw-semibold">Operations Manager email</div><div class="text-muted fs-xxs">Personal information</div></td>
+                  <td class="text-muted text-decoration-line-through">omar.mansour@najdlogistics.sa</td>
+                  <td class="text-qc-navy fw-semibold">omar.almansour@najdlogistics.sa</td>
+                </tr>
+                <tr class="row-in" style="animation-delay:.08s">
+                  <td><div class="fw-semibold">Operations Manager phone</div><div class="text-muted fs-xxs">Personal information</div></td>
+                  <td class="text-muted text-decoration-line-through">+966 50 765 4321</td>
+                  <td class="text-qc-navy fw-semibold">+966 55 901 2244</td>
+                </tr>
+                <tr class="row-in" style="animation-delay:.16s">
+                  <td><div class="fw-semibold">Operations Manager land line</div><div class="text-muted fs-xxs">Personal information</div></td>
+                  <td class="text-muted text-decoration-line-through">+966 11 234 5690</td>
+                  <td class="text-qc-navy fw-semibold">+966 11 234 5699</td>
+                </tr>
+                <tr class="row-in" style="animation-delay:.24s">
+                  <td><div class="fw-semibold">Company profile</div><div class="text-muted fs-xxs">Supporting documents</div></td>
+                  <td class="text-muted text-decoration-line-through">Najd_Company_Profile_2025.pdf</td>
+                  <td class="text-qc-navy fw-semibold">Najd_Company_Profile_2026.pdf</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="qc-card p-3 p-md-4" data-aos="fade-up">
+          <h2 class="h6 fw-semibold mb-3">Supporting Documents</h2>
+          <div class="vstack gap-2">
+            <div class="d-flex align-items-center gap-3 border rounded-3 p-3">
+              <span class="qc-file-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+              <div class="flex-grow-1" style="min-width:0">
+                <div class="fw-semibold fs-xs">Updated company profile</div>
+                <div class="text-muted fs-xxs text-truncate">Najd_Company_Profile_2026.pdf · PDF · 1.8 MB</div>
+              </div>
+              <a href="#" class="btn-link-qc">Preview</a>
+              <a href="#" class="text-qc-red" aria-label="Download"><i class="bi bi-download"></i></a>
+            </div>
+            <div class="d-flex align-items-center gap-3 border rounded-3 p-3">
+              <span class="qc-file-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+              <div class="flex-grow-1" style="min-width:0">
+                <div class="fw-semibold fs-xs">Operations Manager authorization letter</div>
+                <div class="text-muted fs-xxs text-truncate">Najd_Ops_Authorization.pdf · PDF · 0.6 MB</div>
+              </div>
+              <a href="#" class="btn-link-qc">Preview</a>
+              <a href="#" class="text-qc-red" aria-label="Download"><i class="bi bi-download"></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-4 ">
+        <section class="qc-card p-3 p-md-4 mb-4" data-aos="fade-left">
+          <h2 class="h5 fw-semibold mb-1">Request activity</h2>
+          <p class="text-muted fs-xs mb-3">All times in AST · Oldest to newest</p>
+          <ul class="qc-timeline">
+            <li data-aos="fade-up" data-aos-delay="100">
+              <span class="qc-tl-dot"></span>
+              <div class="fw-semibold fs-xs">Request submitted</div>
+              <div class="text-muted fs-xxs">08 Oct 2026 · 09:24 AST</div>
+              <div class="text-qc-navy fw-semibold fs-xxs mt-1">Amal Al-Faisal · Vendor</div>
+              <div class="text-muted fs-xxs mt-1">4 profile changes and 2 supporting documents submitted. Tracking number issued.</div>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="250">
+              <span class="qc-tl-dot"></span>
+              <div class="fw-semibold fs-xs">Review started</div>
+              <div class="text-muted fs-xxs">09 Oct 2026 · 11:00 AST</div>
+              <div class="text-qc-navy fw-semibold fs-xxs mt-1">Sara Al-Harbi · Compliance Admin</div>
+              <div class="text-muted fs-xxs mt-1">Assigned for contact verification and review of cold-chain service capability.</div>
+            </li>
+            <li class="current" data-aos="fade-up" data-aos-delay="400">
+              <span class="qc-tl-dot"></span>
+              <div class="fw-semibold fs-xs">Admin follow-up added</div>
+              <div class="text-muted fs-xxs">11 Oct 2026 · 10:15 AST</div>
+              <div class="text-qc-navy fw-semibold fs-xxs mt-1">Sara Al-Harbi · Compliance Admin</div>
+              <div class="text-muted fs-xxs mt-1">Company profile reviewed. Contact verification is in progress; no vendor action required.</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="qc-card p-3 p-md-4" data-aos="fade-left" data-aos-delay="150">
+          <h2 class="h5 fw-semibold mb-1">Admin Review</h2>
+          <div class="fw-semibold fs-xs mb-2">Follow-up or decision note</div>
+          <p class="text-muted fs-xs mb-0">Company profile reviewed. Verifying the updated Operations Manager contact details before approval.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.10.10/build/js/intlTelInput.min.js"></script>
+  <script src="assets/js/phone.js"></script>
+<script src="assets/js/vendor.js"></script>
+</body>
+</html>
